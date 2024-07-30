@@ -1,0 +1,23 @@
+Json XString:{ "person_1": { "person_type": "UNKNOWN", "name": "John Doe" }, "person_2": { "person_type": "UNKNOWN", "name": "Jane Doe" } }
+Json person 1:{"person_type":"UNKNOWN","name":"John Doe"}
+Json person 2:{"person_type":"UNKNOWN","name":"Jane Doe"}
+Error happens
+Json XString:{ "person_1": { "person_type": "GOOD", "name": "John Doe" }, "person_2": { "person_type": "BAD", "name": "Jane Doe" } }
+Json person 1:{"person_type":"GOOD","name":"John Doe"}
+Json person 2:{"person_type":"BAD","name":"Jane Doe"}
+========================== GOOD EX ==========================
+String content:{"person_type":"GOOD","name":"John Doe"}
+relationship:type_1
+====================================
+
+========================== BAD EX ==========================
+String content:{"person_type":"BAD","name":"Jane Doe"}
+relationship:type_2
+====================================
+
+Test rel 1 - Start
+Test rel 1 - End
+
+Test rel 2 - Start
+Test rel 2 - End
+
