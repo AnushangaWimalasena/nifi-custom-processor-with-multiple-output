@@ -85,27 +85,27 @@ import java.util.Set;
 public class MyProcessor extends AbstractProcessor {
     public static final Relationship REL_FAILURE = new Relationship
             .Builder()
-            .description("Failed adding attributes")
+            .description("Error files")
             .name("failure")
             .build();
 
     public static final Relationship REL_SUCCESS_TYPE_1 = new Relationship
             .Builder()
-            .description("Added attributes to flow file 1")
+            .description("Type 1 FlowFile")
             .name("type_1")
             .build();
 
 
     public static final Relationship REL_SUCCESS_TYPE_2 = new Relationship
             .Builder()
-            .description("Added attributes to flow file 2")
+            .description("Type 2 FlowFile")
             .name("type_2")
             .build();
 
 
     public static final Relationship REL_ORG = new Relationship
             .Builder()
-            .description("Original file")
+            .description("Original FlowFile")
             .name("org")
             .build();
 
@@ -113,7 +113,7 @@ public class MyProcessor extends AbstractProcessor {
     public static final PropertyDescriptor ATTRIBUTE_TO_EXPLODE = new PropertyDescriptor
             .Builder()
             .name("attributeToExplode")
-            .displayName("Attribute To Explode")
+            .displayName("Test attribute 1")
             .required(true)
             .expressionLanguageSupported(ExpressionLanguageScope.VARIABLE_REGISTRY)
             .addValidator(StandardValidators.ATTRIBUTE_EXPRESSION_LANGUAGE_VALIDATOR)
@@ -122,7 +122,7 @@ public class MyProcessor extends AbstractProcessor {
     public static final PropertyDescriptor EXPLODED_ATTRIBUTE_PREFIX = new PropertyDescriptor
             .Builder()
             .name("explodedAttributePrefix")
-            .displayName("Exploded Attribute Prefix")
+            .displayName("Test attribute 2")
             .defaultValue("")
             .addValidator(StandardValidators.ATTRIBUTE_EXPRESSION_LANGUAGE_VALIDATOR)
             .build();
